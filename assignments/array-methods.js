@@ -90,6 +90,7 @@ ticketPriceTotal = runners.reduce(function(subtotal, currentValue){
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
+// Problem 1 + Problem 2 + Problem 3
 
 //Add donation total from company Skinix who has donated more than $150
 const sumDonationMoreThanTwoHundredFromSkinix = 
@@ -104,4 +105,3 @@ runners.filter(function(currentValue){
 
 console.log(sumDonationMoreThanTwoHundredFromSkinix)
 
-// Problem 1 + Problem 2 + Problem 3
