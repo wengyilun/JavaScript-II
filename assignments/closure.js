@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function gradmaHouse(){
+   const gradmaKeyHideUnderneath = 'planter'
+   function momHouse(){
+     console.log(`Gradma\'s key is underneath the ${gradmaKeyHideUnderneath}`)
+     const momKeyHideUnderneath = 'doorMat'
+     function whereAreKeys(){
+       console.log(`Dad, Gradma's key is underneath the ${gradmaKeyHideUnderneath} and Mom's key is underneath the ${momKeyHideUnderneath} `)
+     }
+     whereAreKeys()
+   }
+   momHouse()
+}
 
+gradmaHouse()
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
