@@ -28,36 +28,36 @@ function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length)
 }
-// getLength(items, function(length){
-//   console.log(length)
-// })
+getLength(items, function(length){
+  console.log(length)
+})
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length - 1])
 }
 
-// last(items, function(last){
-//   console.log(last)  //?
-// })
+last(items, function(last){
+  console.log(last)  //?
+})
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   return cb(Number(x + y))
 }
 
-// sumNums(2, 3, function(last){
-//   console.log(last)  //?
-// })
+sumNums(2, 3, function(last){
+  console.log(last)  //?
+})
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   return cb(x * y)
 }
 
-// multiplyNums(2, 3, function(multiple){
-//   console.log(multiple)  //?
-// })
+multiplyNums(2, 3, function(multiple){
+  console.log(multiple)  //?
+})
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
@@ -65,39 +65,40 @@ function contains(item, list, cb) {
    return cb(list.includes(item))
 }
 
-// contains('Notebook', items, function(contained){
-//   console.log(contained)  //?
-// })
+contains('Notebook', items, function(contained){
+  console.log(contained)  //?
+})
 
 
 /* STRETCH PROBLEM */
 const names = ['paul', 'ellen', 'tommy', 'paul', 'paul'];
 
-names.includes('paul')//?
-const uniqueN = []
-for(let i=0; i< names.length; i++){
-  if(!uniqueN.includes(names[i])){ 
-    uniqueN.push(names[i])
-  }
-}
-uniqueN//?
-
+// const uniqueN = []
+// for(let i=0; i< names.length; i++){
+//   if(!uniqueN.includes(names[i])){ 
+//     uniqueN.push(names[i])
+//   }
+// }
+// uniqueN//?
 
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
   const uniqueNames = []
-  const message = "GrandMomScope"
+  const message = "Here are the unique names:"
   //return cb(message)
-  return cb(function(){
-     'message'
-  })
-    //return message//uniqueNames  
-  //)
+    return cb(message,function(){
+      for(let i=0; i< names.length; i++){
+        if(!uniqueNames.includes(array[i])){ 
+          uniqueNames.push(array[i])
+        }
+      }
+      return uniqueNames
+    }())
 }
 
 
-removeDuplicates(names, function(uniqueNames){
-  console.log(uniqueNames)
+removeDuplicates(names, function(msg, uniqueNames){
+  console.log(msg, uniqueNames)
 })
